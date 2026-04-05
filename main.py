@@ -26,4 +26,12 @@ def greet():
     return "Hello"
 print(greet(), "Wendy")
 
+age = int(input("How old are you now?"))
+print("How old will you be next year?")
+print(age + 1)
 
+my_lucky_number = 7
+guess = int(input("Guess my lucky number! I think it is: "))
+while my_lucky_number != guess:
+     guess = int(input("Oops! Not it. Try again: "))
+print("Congrats! You guessed it.")
