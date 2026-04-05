@@ -22,3 +22,8 @@ var2 = ["hi", "hello", "ola"]
 var2 = 3
 menu_items = ['wrap', 'salad', 'sandwich', 'soup']
 print(menu_items[3])
+def greet():
+    return "Hello"
+print(greet(), "Wendy")
+
+
