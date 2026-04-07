@@ -311,8 +311,151 @@ print(x)
 x = max("Mike", "John", "Vicky")
 print(x)
 
-
 a = (1, 5, 3, 9)
 x = max(a)
 
 print(x)
+
+#memoryview() function returns a memory view object of the given argument.
+x = memoryview(b"Hello")
+
+print(x)
+
+#return the Unicode of the first character
+print(x[0])
+
+#return the Unicode of the second character
+print(x[4])
+
+#min() function returns the smallest item in an iterable or the smallest of two or more arguments.
+x = min(5, 10) 
+print(x)
+
+x = min("Mike", "John", "Vicky")
+print(x)
+
+a = (1, 5, 3, 9)
+x = min(a)
+print(x)
+
+
+# next() - Returns the next item in an iterator
+mylist = iter(["apple", "banana", "cherry"])
+x = next(mylist, "orange")
+print(x)
+x = next(mylist, "orange")
+print(x)
+x = next(mylist, "orange")
+print(x)
+x = next(mylist, "orange")
+print(x)
+
+# object() - Returns a new featureless object
+new_obj = object()
+print(type(new_obj))
+
+# oct() - Converts a number into an octal string
+x = oct(12)
+print(x) # Result: 0o14
+
+
+# open() - Opens a file and returns a file object
+# Writing to a file first
+with open("test.txt", "w") as f:
+    f.write("Hello Python!")
+# Reading it
+f = open("test.txt", "r")
+print(f.read())
+f.close()
+
+# ord() - Returns the Unicode code of a character
+print(ord("A")) # Result: 65
+
+# pow() - Returns x to the power of y
+print(pow(2, 3)) # Result: 8 (2*2*2)
+
+# print() - Prints to the console
+print("This is a print function")
+
+x = ("apple", "banana", "cherry")
+print(x)
+
+# property() - Used in classes (simplified example)
+class Item:
+    def __init__(self): self._name = "Tool"
+    def get_name(self): return self._name
+    name = property(get_name)
+print(Item().name)
+
+# range() - Returns a sequence of numbers
+print(list(range(0, 5))) # Result: [0, 1, 2, 3, 4]
+
+x = range(6)
+for n in x:
+  print(n)
+
+x = range(3, 6)
+for n in x:
+  print(n)
+
+# repr() - Returns a readable string version of an object
+print(repr("Hello")) # Result: "'Hello'"
+
+# reversed() - Returns a reversed iterator
+print(list(reversed([1, 2, 3]))) # Result: [3, 2, 1]
+
+# round() - Rounds a number
+print(round(3.75, 1)) # Result: 3.8
+
+# set() - Returns a new set object (unique elements)
+print(set([1, 2, 2, 3])) # Result: {1, 2, 3}
+
+# setattr() - Sets the value of an attribute of an object
+class MyClass: pass
+obj = MyClass()
+setattr(obj, "value", 100)
+print(obj.value)
+
+# slice() - Returns a slice object
+my_list = ["a", "b", "c", "d"]
+s = slice(0, 2)
+print(my_list[s]) # Result: ['a', 'b']
+
+# sorted() - Returns a sorted list
+print(sorted([3, 1, 4, 2])) # Result: [1, 2, 3, 4]
+
+# staticmethod() - Converts a method into a static method
+class Calc:
+    @staticmethod
+    def add(a, b): return a + b
+print(Calc.add(5, 5))
+
+# str() - Returns a string version of an object
+print(str(100) + " units")
+
+# sum() - Sums the items of an iterator
+print(sum([1, 2, 3, 4, 5])) # Result: 15
+
+# super() - Returns an object that represents the parent class
+class Parent:
+    def message(self): print("Parent message")
+class Child(Parent):
+    def message(self):
+        super().message()
+        print("Child message")
+Child().message()
+
+# tuple() - Returns a tuple
+print(tuple([1, 2, 3])) # Result: (1, 2, 3)
+
+# type() - Returns the type of an object
+print(type(123)) # Result: <class 'int'>
+
+# vars() - Returns the __dict__ property (attributes) of an object
+print(vars(obj))
+
+# zip() - Returns an iterator of tuples joining multiple iterators
+names = ["John", "Serg"]
+ages = [30, 25]
+print(list(zip(names, ages))) # Result: [('John', 30), ('Serg', 25)]
+
