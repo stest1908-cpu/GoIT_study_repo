@@ -108,3 +108,177 @@ delattr(Person, 'age')
 #dict() function creates a dictionary object.
 x = dict(name = "John", age = 36, country = "Norway")
 print(x)
+
+#dir() function returns a list of the specified object's properties and methods.
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+print(dir(Person))
+
+#divmod() function takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder.
+x = divmod(5, 2)
+print(x)
+
+#enumerate() function takes a collection (e.g. a tuple) and returns it as an enumerate object.
+mylist = ("apple", "banana", "cherry")
+x = enumerate(mylist)
+print(list(x))
+
+#eval() function parses the expression passed to this function and runs python expression (code) within the program.
+x = eval('3 + 5')
+print(x)
+
+#exec() function executes the specified code (or object).
+x = 'name = "John"\nprint(name)'
+exec(x)
+
+#filter() function constructs an iterator from elements of an iterable for which a function returns true.
+ages = [1, 5, 12, 17, 18, 24, 32, 45, 65, 72, 80, 81.25]
+
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+
+adults = filter(myFunc, ages)
+
+for x in adults:
+  print(x)
+
+#float() function converts the specified value into a floating point number.
+x = float(1)
+print(x)
+
+#format() function formats a specified value into a specified format.
+x = format(0.5, '%')
+print(x)  
+
+x = format(6, 'b')
+print(x)
+
+#frozenset() function returns a frozenset object which is an immutable set. The frozenset object is immutable and cannot be modified after it is created.
+x = frozenset([1, 2, 3, 4, 5])
+print(x)
+
+#getattr() function returns the value of the specified attribute (property or method) from the specified object.
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = getattr(Person, 'age')
+print(x)  
+
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = getattr(Person, 'page', 'my message')
+print(x)
+
+#globals() function returns a dictionary containing the current scope's global variables.
+x = globals()
+print(x)
+
+x = globals()
+print(x["__file__"])
+
+#hasattr() function returns True if the specified object has the specified attribute (property/method), otherwise it returns False.
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = hasattr(Person, 'country')
+print(x)
+
+#hash() function returns the hash value of a specified object.
+x = hash("Test")
+print(x)
+
+#help() function invokes the built-in help system.
+help(print)
+
+#hex() function converts a specified number into a hexadecimal number.
+x = hex(255)
+print(x)
+
+#id() function returns the id of an object.
+x = ('apple', 'banana', 'cherry')
+y = id(x)
+print(y)
+
+# This value is the memory address of the object and will be different every time you run the program
+
+#input() function allows user input.
+name = input("Enter your name: ")
+print("Hello, " + name)
+
+#int() function converts the specified value into an integer number.
+x = int(2.8)
+print(x)
+
+x = int("12")
+
+print(x)
+
+#isinstance() function returns True if the specified object is of the specified type, otherwise it returns False.
+x = isinstance(5, int)
+
+print(x)
+
+x = isinstance("Hello", (float, int, str, list, dict, tuple))
+print(x)
+
+class myObj:
+  name = "John"
+
+y = myObj()
+
+x = isinstance(y, myObj)
+print(x)
+
+#issubclass() function returns True if the specified class is a subclass of the specified object, otherwise it returns False.
+class myAge:
+  age = 36
+
+class myObj(myAge):
+  name = "John"
+  age = myAge
+
+x = issubclass(myObj, myAge)
+print(x)
+
+#iter() function returns an iterator object.
+x = iter(["apple", "banana", "cherry", "orange"])
+print(next(x))
+print(next(x))
+print(next(x))
+print(next(x))
+
+#len() function returns the number of items in an object.
+mylist = ["apple", "orange", "cherry"]
+
+x = len(mylist)
+
+print(x)
+
+
+mylist = "Sergey"
+x = len(mylist)
+print(x)
+
+#list() function creates a list object.
+x = list(("apple", "banana", "cherry", "orange"))
+print(x)
+
+#locals() function returns a dictionary containing the current scope's local variables.
+x = locals()
+print(x)
+
+x = locals()
+print(x["__file__"])
