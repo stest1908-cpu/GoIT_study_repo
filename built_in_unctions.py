@@ -464,3 +464,11 @@ names = ["John", "Serg"]
 ages = [30, 25]
 print(list(zip(names, ages))) # Result: [('John', 30), ('Serg', 25)]
 
+a = ("John", "Charles", "Mike")
+b = ("Jenny", "Christy", "Monica", "Vicky")
+
+x = zip(a, b)
+
+#use the tuple() function to display a readable version of the result:
+
+print(tuple(x))
