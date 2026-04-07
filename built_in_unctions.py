@@ -404,6 +404,11 @@ print(repr("Hello")) # Result: "'Hello'"
 # reversed() - Returns a reversed iterator
 print(list(reversed([1, 2, 3]))) # Result: [3, 2, 1]
 
+alph = ["a", "b", "c", "d"]
+ralph = reversed(alph)
+for x in ralph:
+  print(x)
+
 # round() - Rounds a number
 print(round(3.75, 1)) # Result: 3.8
 
