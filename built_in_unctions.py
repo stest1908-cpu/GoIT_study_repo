@@ -372,7 +372,7 @@ f.close()
 print(ord("A")) # Result: 65
 
 # pow() - Returns x to the power of y
-print(pow(2, 3)) # Result: 8 (2*2*2)
+print(pow(2, 4)) # Result: 16 (2*2*2*2)
 
 # print() - Prints to the console
 print("This is a print function")
