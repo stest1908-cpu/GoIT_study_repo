@@ -282,3 +282,37 @@ print(x)
 
 x = locals()
 print(x["__file__"])
+
+#map() function applies a specified function to each item of an iterable and returns a map object (an iterator).
+def myFunc(x):
+  return len(x)
+
+x = map(myFunc, ('apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon', 'mango'))
+
+print(x)
+
+#convert the map into a list, for readability:
+print(list(x))
+
+def myfunc(a, b):
+  return a + b
+
+x = map(myfunc, ('apple', 'banana', 'cherry'), ('orange', 'lemon', 'pineapple'))
+
+print(x)
+
+#convert the map into a list, for readability:
+print(list(x))
+
+#max() function returns the largest item in an iterable or the largest of two or more arguments.
+x = max(5, 10)
+print(x)
+
+x = max("Mike", "John", "Vicky")
+print(x)
+
+
+a = (1, 5, 3, 9)
+x = max(a)
+
+print(x)
