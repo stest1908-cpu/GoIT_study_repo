@@ -1,0 +1,76 @@
+# --- Python File Methods Examples ---
+
+# Preparation: Creating a sample file to work with
+with open("warehouse_data.txt", "w") as f:
+    f.write("Item001: Screws\nItem002: Nails\nItem003: Bolts")
+
+# 1. open() & read() - Opens a file and returns its content
+f = open("warehouse_data.txt", "r")
+print(f.read())
+f.close()
+
+# 2. readline() - Reads one line from the file
+f = open("warehouse_data.txt", "r")
+print(f.readline()) # "Item001: Screws"
+f.close()
+
+# 3. readlines() - Returns a list of all lines
+f = open("warehouse_data.txt", "r")
+lines = f.readlines()
+print(lines) # ['Item001: Screws\n', 'Item002: Nails\n', ...]
+f.close()
+
+# 4. write() - Writes a string to the file
+with open("log.txt", "w") as f:
+    f.write("System started.")
+
+# 5. writelines() - Writes a list of strings
+lines_to_write = ["\nUser: Serg", "\nAction: Inventory Check"]
+with open("log.txt", "a") as f: # 'a' means append (add to end)
+    f.writelines(lines_to_write)
+
+# 6. tell() - Returns current file position (cursor)
+f = open("warehouse_data.txt", "r")
+f.read(5)
+print(f.tell()) # 5
+f.close()
+
+# 7. seek() - Changes the file position (moves cursor)
+f = open("warehouse_data.txt", "r")
+f.seek(9) # Move to 9th character
+print(f.read(6)) # "Screws"
+f.close()
+
+# 8. writable() / readable() - Checks permissions
+f = open("warehouse_data.txt", "r")
+print(f.readable()) # True
+print(f.writable()) # False
+f.close()
+
+# 9. flush() - Flushes the internal buffer (forces writing to disk)
+with open("buffer.txt", "w") as f:
+    f.write("Critical data")
+    f.flush() 
+
+# 10. truncate() - Resizes the file to a specified size
+with open("log.txt", "a") as f:
+    f.truncate(10) # Keeps only first 10 bytes
+
+# 11. fileno() - Returns the file descriptor (OS level)
+f = open("warehouse_data.txt", "r")
+print(f.fileno()) 
+f.close()
+
+#tell() and truncate() examples:
+f = open("warehouse_data.txt", "r")
+print(f.tell())
+
+#truncate() example:
+f = open("warehouse_data.txt", "a")
+f.truncate(20)
+f.close()
+
+#open and read the file after the truncate:
+f = open("warehouse_data.txt", "r")
+print(f.read())
+
