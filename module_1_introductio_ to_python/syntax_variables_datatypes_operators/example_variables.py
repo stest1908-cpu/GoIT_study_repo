@@ -16,4 +16,5 @@ if user_age >= ADULT_THR:
 else:
     print(f"{user_name} is a minor.")
 
-   
+   #для імен класів (приклад — MyClass)
+   #для функцій та змінних (приклад — my_function).
