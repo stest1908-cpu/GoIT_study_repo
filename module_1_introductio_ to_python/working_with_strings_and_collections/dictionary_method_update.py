@@ -3,3 +3,6 @@
 #де ключ "email" буде додано в словник, а значення ключа "age" буде оновлено.
 
 my_dict = {"name": "Alice", "age": 25}
+print(my_dict)
+my_dict.update({"email": "alice@example.com", "age": 26})
+print(my_dict)
