@@ -6,3 +6,5 @@ my_dict = {"name": "Alice", "age": 25}
 print(my_dict)
 my_dict.update({"email": "alice@example.com", "age": 26})
 print(my_dict)
+my_dict.update({"name": "Bob", 'city': "New York"})
+print(my_dict)

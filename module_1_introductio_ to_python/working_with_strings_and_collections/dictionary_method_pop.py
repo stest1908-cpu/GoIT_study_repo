@@ -9,5 +9,7 @@ my_dict = {"name": "Alice", "age": 25}
 print(my_dict)
 my_dict.pop("age")
 print(my_dict)
+my_dict ["name"] = "Sem"
+print(my_dict)
 my_dict.pop("age")
 print(my_dict)
