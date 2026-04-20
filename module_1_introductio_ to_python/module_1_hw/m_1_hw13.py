@@ -7,3 +7,14 @@
 
 #Очікуваний результат:
 #Після виконання програми, список my_list повинен відображати вказані зміни.
+
+my_list = [2024, 3.12]
+some_data = ['Python']
+my_list.extend(some_data)
+print(my_list)  # Виведе: [2024, 3.12, 'Python']
+
+my_list.insert(1, 'Python')
+
+my_list.reverse()
+print(my_list)
+
