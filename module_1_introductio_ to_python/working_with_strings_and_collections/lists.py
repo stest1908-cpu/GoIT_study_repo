@@ -22,6 +22,7 @@ print(my_list[-2])  # Виведе: 'five'
 
 #список із п'ятьох чисел.
 my_list2 = [1, 2, 3, 4, 5]
+print(type(my_list2))
 print(my_list2)  # Виведе: [1, 2, 3, 4, 5]
 print(my_list2[0])  # Виведе: 1
 print(my_list2[2:5])  # Виведе: [3, 4, 5]
