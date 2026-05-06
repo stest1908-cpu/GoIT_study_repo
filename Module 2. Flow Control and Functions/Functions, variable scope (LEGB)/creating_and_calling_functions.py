@@ -20,11 +20,11 @@ say_hello()
 Ця функція не приймає параметрів, тому в дужках не оголошені якісь змінні.'''
 
 #My example
-def some_list():
-    some_list = ["apple", "banana", "cherry"]
-    for index, value in enumerate(some_list):
+def print_fruits():
+    fruits = ["apple", "banana", "cherry"]
+    for index, value in enumerate(fruits):
         print(index, value)
 
-some_list()
+print_fruits()
 
-some_list()
+print_fruits()
