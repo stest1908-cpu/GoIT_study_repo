@@ -49,3 +49,11 @@ def second(size, **kwargs):
 print(second(3, comment_one="first", comment_two="second", comment_third="third"))
 # size=10, kwargs={"comment_one": "Alex", "comment_two": "Boris"} → 10 + 2 = 12
 print(second(10, comment_one="Alex", comment_two="Boris"))
+
+# Тести
+assert first(5, "first", "second", "third") == 8
+assert first(1, "Alex", "Boris") == 3
+assert second(3, comment_one="first", comment_two="second", comment_third="third") == 6
+assert second(10, comment_one="Alex", comment_two="Boris") == 12
+print("Всі тести пройшли!")
+
