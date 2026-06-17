@@ -1,3 +1,8 @@
+# Модуль 4 | Робота з файлами та модульна система
+# Тема: Менеджер контексту (Context Manager)
+# Розглянуто: with open(), автоматичне закриття файлу, читання/запис через with, цикл for по файлу
+# -----------------------------------------------
+
 #! Менеджер контексту
 
 '''
@@ -58,3 +63,58 @@ print(lines)
 ['first line', 'second line', 'third line']
 
 #Надалі ми будемо використовувати тільки менеджер контексту при роботі з файлами.
+
+#--------------------------------------------------#
+
+#Task from Claude
+
+'''
+Завдання1: Щоденник
+
+1. Створи файл diary.txt
+2. Запиши в нього 3 рядки (будь-який текст, наприклад записи щоденника)
+3. Відкрий файл і прочитай тільки перший рядок
+4. Виведи його в консоль
+5. Закрий файл
+'''
+
+# Створюємо файл diary.txt та записуємо в нього 3 рядки
+with open("test_diary.txt", "w") as fh:
+    fh.write("Today was a good day.\n")
+    fh.write("I went for a walk in the park.\n")
+    fh.write("I had a delicious dinner.\n")
+
+# Відкриваємо файл для читання і прочитуємо перший рядок
+with open("test_diary.txt", "r") as fh:
+    first_line = fh.readline().strip()  # Читаємо перший рядок та видаляємо пробіли
+    second_line = fh.readline().strip()  # Читаємо другий рядок та видаляємо пробіли
+
+# Виводимо перший рядок
+print(first_line)
+# Виводимо другий рядок
+print(second_line)
+
+'''
+Завдання2: Логування
+1. Створи файл log.txt
+2. Запиши в нього 5 рядків (наприклад, логування подій):
+    - "2024-06-01 10:00:00 - Application started"
+    - "2024-06-01 10:05:00 - User logged in"
+    - "2024-06-01 10:10:00 - User performed an action"
+    - "2024-06-01 10:15:00 - User logged out"
+    - "2024-06-01 10:20:00 - Application stopped"
+3. Відкрий файл і виведи всі рядки через цикл for
+4. Все через with, без close()
+
+'''
+
+with open("log.txt", "w") as fh:
+    fh.write("2024-06-01 10:00:00 - Application started\n")
+    fh.write("2024-06-01 10:05:00 - User logged in\n")
+    fh.write("2024-06-01 10:10:00 - User performed an action\n")
+    fh.write("2024-06-01 10:15:00 - User logged out\n")
+    fh.write("2024-06-01 10:20:00 - Application stopped\n")
+
+with open("log.txt", "r") as fh:
+    for line in fh:
+        print(line.strip())  # Виводимо кожен рядок, видаляючи пробіли
