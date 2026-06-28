@@ -1,6 +1,6 @@
 # Модуль 4 | Робота з файлами та модульна система
 # Тема: Створення шляхів (Creating paths)
-# Розглянуто:
+# Розглянуто: Path() з рядка, оператор / для об'єднання шляхів, Path.cwd(), Path.home()
 # -----------------------------------------------
 '''
 Створення шляхів за допомогою класу Path у модулі pathlib у Python є зручним способом маніпуляції файловими шляхами, який абстрагує від особливостей конкретної операційної системи.
@@ -25,4 +25,45 @@ path_windows = Path("C:/Users/Username/Documents/file.txt")
 Розглянемо приклад:
 '''
 
-from 
+from pathlib import Path # імпортуємо модуль pathlib
+
+# Початковий шлях
+base_path = Path("/user/bin") 
+
+# Додавання додаткових частин до шляху
+full_path = base_path / "subdir" / "script.py"
+
+print(full_path) # Виведе: /user/bin/subdir/script.py
+
+'''
+У цьому прикладі, до початкового шляху base_path додаються додаткові частини - директорія "subdir" та файл "script.py". Оператор / дозволяє це зробити чисто та зрозуміло і ми отримуємо шлях до файлу:
+
+\\usr\\bin\\subdir\\script.py
+'''
+
+#--------------------------------------------------------------------------------#
+
+'''Завдання: Створення шляхів
+
+1. Імпортуй Path з pathlib
+2. Створи шлях до файлу "data/reports/summary.txt" через Path()
+3. Виведи цей шлях
+4. Створи базовий шлях "projects" і додай до нього "python" / "homework.py" через оператор /
+5. Виведи отриманий шлях
+6. Виведи поточну робочу директорію через Path.cwd()
+7. Пиши сам, показуй коли готово.
+'''
+
+from pathlib import Path
+
+# Створюємо шлях до файлу через Path() — r-рядок обов'язковий на Windows
+file_path = Path(r"D:\My_GoIT_Repo\data\reports\summary.txt")
+print(file_path)
+
+# Базовий шлях + оператор / для додавання підпапок і файлу
+base_projects_path = Path(r"D:\My_GoIT_Repo\projects")
+add_projects_path = base_projects_path / "python" / "homework.py"
+print(add_projects_path)
+
+# Поточна робоча директорія — та, звідки запущено скрипт
+print(Path.cwd())

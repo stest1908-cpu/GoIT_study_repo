@@ -1,3 +1,8 @@
+# Передкурс | Основи Python
+# Тема: Set methods
+# Розглянуто:
+# -----------------------------------------------
+
 # --- Python Set Methods Examples ---
 
 # 1. add() - Adds an element to the set

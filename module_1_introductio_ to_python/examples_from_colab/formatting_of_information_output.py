@@ -1,3 +1,8 @@
+# Модуль 1 | Вступ до Python
+# Тема: Formatting of information output
+# Розглянуто:
+# -----------------------------------------------
+
 name = 'Alice'
 age = 30
 city = 'New York'

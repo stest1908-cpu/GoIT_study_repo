@@ -1,3 +1,8 @@
+# Передкурс | Основи Python
+# Тема: List array methods
+# Розглянуто:
+# -----------------------------------------------
+
 # --- Python List Methods Examples ---
 
 # 1. append() - Adds an element at the end of the list

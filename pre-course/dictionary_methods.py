@@ -1,3 +1,8 @@
+# Передкурс | Основи Python
+# Тема: Dictionary methods
+# Розглянуто:
+# -----------------------------------------------
+
 # --- Python Dictionary Methods Examples ---
 
 # 1. clear() - Removes all elements from the dictionary

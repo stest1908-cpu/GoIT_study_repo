@@ -1,3 +1,8 @@
+# Модуль 1 | Вступ до Python
+# Тема: Example variables
+# Розглянуто:
+# -----------------------------------------------
+
 age = 20
 user_name = "Boris"
 user_name = "Fedor"

@@ -1,3 +1,8 @@
+# Модуль 1 | Вступ до Python
+# Тема: Example demonstrates program elements
+# Розглянуто:
+# -----------------------------------------------
+
 # Введення (отримання даних)
 name = input("Enter your name: ")
 

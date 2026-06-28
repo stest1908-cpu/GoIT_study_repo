@@ -1,3 +1,8 @@
+# Передкурс | Основи Python
+# Тема: Built in unctions
+# Розглянуто:
+# -----------------------------------------------
+
 #all() function returns True if all items in an iterable are true, otherwise it returns False.
 mylist = [True, True, False]
 x = all(mylist)

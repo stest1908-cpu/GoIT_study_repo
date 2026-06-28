@@ -1,3 +1,8 @@
+# QA сесія 18.04.26 | Основи веб
+# Тема: 1.7
+# Розглянуто:
+# -----------------------------------------------
+
 #Простий REST сервер на BASEHTTPRequestHandler
 
 from http.server import BaseHTTPRequestHandler, HTTPServer

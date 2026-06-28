@@ -1,3 +1,8 @@
+# Модуль 1 | Вступ до Python
+# Тема: Example logical type
+# Розглянуто:
+# -----------------------------------------------
+
 is_active = True
 is_delete = False
 

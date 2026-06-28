@@ -1,3 +1,8 @@
+# Передкурс | Основи Python
+# Тема: String methods
+# Розглянуто:
+# -----------------------------------------------
+
 # --- Python String Methods Examples ---
 
 text = "hello world"

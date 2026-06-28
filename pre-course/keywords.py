@@ -1,3 +1,8 @@
+# Передкурс | Основи Python
+# Тема: Keywords
+# Розглянуто:
+# -----------------------------------------------
+
 # --- Python Keywords Examples ---
 
 # False, True, None - Basic constants
